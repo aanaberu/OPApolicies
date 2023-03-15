@@ -21,11 +21,7 @@ jobs:
         run_id=${{ github.run_id }}
         echo "::set-output name=run_id::$run_id"
         echo ${{github.run_id}}
-#        sed -i "s/PLACEHOLDER/$run_id/g" start-release.yaml
-#        cat start-release.yaml
-#        curl -LO https://dist.xebialabs.com/public/xl-cli/22.0.0/linux-amd64/xl
-#        chmod +x xl
-        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url '$XLR_URL/api/v1/templates/Applications/Folder874c818d3d104ded841580222023c016/Release23bda3eb34bc425caa28798f635f46e0/start' -d '{"releaseTitle":"MyRelease-AndroidAppProtectionTest"}
+        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url '$XLR_URL/api/v1/templates/Applications/Folder874c818d3d104ded841580222023c016/Release23bda3eb34bc425caa28798f635f46e0/start' -d '{"releaseTitle":"MyRelease-AndroidAppProtectionTest"}'
 #        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url '$XLR_URL/api/v1/templates/Applications/Folder874c818d3d104ded841580222023c016/Release23bda3eb34bc425caa28798f635f46e0/start' -d '{"releaseTitle":"MyRelease-AndroidAppProtectionTest", "releaseVariables": {"REPO_NAME": "AndroidAppProtectionTest", "WORKFLOWID": "$run_id"}}'
 #        ./xl apply --xl-release-url=$XLR_URL --xl-release-username=$XLR_USER --xl-release-password=$XLR_PASS --file start-release.yaml
 #        echo `./xl version`
