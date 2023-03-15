@@ -1,0 +1,10 @@
+package system.appaware.check
+
+import future.keywords.if
+
+default allow := false
+
+allow if {
+	input[0].tier1 >= 70
+	input[1].tier2 >= 40
+}

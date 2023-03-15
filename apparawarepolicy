@@ -1,0 +1,13 @@
+11 lines (8 sloc)  162 Bytes
+
+package system.appaware.check2
+
+import future.keywords.if
+
+default allow := false
+
+allow if {
+	input[0].tier1 >= 70
+	input[1].tier2 >= 40
+	input[2].tier3 >= 20
+}
