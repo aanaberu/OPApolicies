@@ -1,6 +1,5 @@
 package system.appaware.check
 
-
 import future.keywords.if
 
 default allow := false
