@@ -7,5 +7,5 @@ default allow := false
 
 allow if {
 	input[0].tier1 >= 70
-	input[1].tier2 >= 50
+	input[1].tier2 >= 60
 }
