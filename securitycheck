@@ -1,0 +1,19 @@
+package vulnerablity
+
+default ignore = false
+
+ignore {
+	input.pkg_name == "bash"
+}
+
+ignore {
+	input.cwe_id == "CWE-79"
+}
+
+ignore {
+	input.cvss_vector.user_interaction == "required"
+}
+
+ignore {
+	input.cvss_score < 7.0
+}
