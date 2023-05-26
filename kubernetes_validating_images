@@ -1,0 +1,11 @@
+package kubernetes.validating.images
+
+import future.keywords.in
+
+default allow = false
+
+allow {
+    input.kind == "Pod"
+some container in input.spec.containers
+not endswith(container.image, ":latest")
+}
