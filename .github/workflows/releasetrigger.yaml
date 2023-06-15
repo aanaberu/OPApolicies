@@ -21,7 +21,12 @@ jobs:
         run_id=${{ github.run_id }}
         echo "::set-output name=run_id::$run_id"
         echo ${{github.run_id}}
-        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url 'https://d77f-2600-1700-1850-ca20-6061-e6d2-e45f-c57f.ngrok-free.app/api/v1/templates/Applications/Folder0b4b8f1596c14ba8966aa00d7965925b/Release2d9bd9674d0a4f9d9ce379da4c7be900/start' -d '{"releaseTitle":"MyRelease-AndroidAppProtectionTest"}'
+
+# Trriger Update Policy 
+        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url 'https://d77f-2600-1700-1850-ca20-6061-e6d2-e45f-c57f.ngrok-free.app/api/v1/templates/Applications/Folderf33e14b92e1747698546a27014fc4316/Releaseb0c1e89cd1984594b0a54c5def5289e9/start' -d '{"releaseTitle":"Release-UpdatePolicy"}'
+
+# Trigger Andriod Test
+#       curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url 'https://d77f-2600-1700-1850-ca20-6061-e6d2-e45f-c57f.ngrok-free.app/api/v1/templates/Applications/Folder0b4b8f1596c14ba8966aa00d7965925b/Release2d9bd9674d0a4f9d9ce379da4c7be900/start' -d '{"releaseTitle":"MyRelease-AndroidAppProtectionTest"}'
 #        curl --request POST -u 'admin:admin' --header 'content-type: application/json' --url '$XLR_URL/api/v1/templates/Applications/Folder874c818d3d104ded841580222023c016/Release23bda3eb34bc425caa28798f635f46e0/start' -d '{"releaseTitle":"MyRelease-AndroidAppProtectionTest", "releaseVariables": {"REPO_NAME": "AndroidAppProtectionTest", "WORKFLOWID": "$run_id"}}'
 #        ./xl apply --xl-release-url=$XLR_URL --xl-release-username=$XLR_USER --xl-release-password=$XLR_PASS --file start-release.yaml
 #        echo `./xl version`
